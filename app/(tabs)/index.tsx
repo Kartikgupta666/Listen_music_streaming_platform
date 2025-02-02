@@ -9,10 +9,10 @@ export default function TabTwoScreen() {
   const display = async () => {
     SetLoading(true)
     try {
-      const res = await fetch(`https://jiosaavnapi-backend.onrender.com/result/?query=${inputText}`, { method: 'GET' });
+      const res = await fetch(`https://jiosaavnapi-backend.onrender.com/song/?query=${inputText}`, { method: 'GET' });
       // console.log(res)
       const json = await res.json();
-      console.log(json)
+      // console.log(json)
       if (Array.isArray(json)) {
         setData(json);
       }
@@ -32,7 +32,7 @@ export default function TabTwoScreen() {
       </Text>
       <TextInput
         style={styles.input}
-        placeholder="Enter your song name or you can past sonk link from jio savan"
+        placeholder="Enter your song name or you can past song link from jio savan"
         value={inputText}
         onChangeText={setInputText}
         returnKeyType="search" // Changes the "Enter" key to "Search"

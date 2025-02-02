@@ -19,6 +19,11 @@ const MAPPING = {
   'pause-circle': 'pause-circle-filled',
   'play-circle': 'play-circle-filled',
   'play-skip-forward': 'skip-next',
+  'add': 'add',
+  'music': "library-music",
+  'more': 'more-vert',
+  'playlist-add': 'playlist-add-check',
+  'delete':'delete-outline',
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],

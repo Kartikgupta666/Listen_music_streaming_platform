@@ -1,22 +1,27 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 import { IconSymbol } from '@/components/ui/IconSymbol';
-
-const PlaylistCard = ({title , description}) => {
-
+import { deletePlaylist } from './lib/Playlistoperations';
+const PlaylistCard = ({ title, description, id, refreshPlaylists }) => {
+      
     return (
         <View style={styles.playlistItem}>
-                  <IconSymbol size={40} name="house.fill" color="white" />
-                  <View>
-                      <Text style={styles.playlistTitle}>{title}</Text>
-                <Text style={styles.playlistDescription}>Playlist • {description}</Text>
-                  </View>
-              </View>
+
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <IconSymbol size={40} name="music" color="white" />
+                <View>
+                    <Text style={styles.playlistTitle}>{title}</Text>
+                    <Text style={styles.playlistDescription}>Playlist • {description}</Text>
+                </View>
+            </View>
+            <TouchableOpacity onPress={() => deletePlaylist(id, refreshPlaylists)}>
+                <IconSymbol size={30} name="delete" color="white" />
+            </TouchableOpacity>
+        </View>
     )
 }
 
 export default PlaylistCard
-
 
 
 const styles = StyleSheet.create({
@@ -64,6 +69,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         paddingBottom: 16,
         paddingTop: 16,
+        justifyContent: "space-between",
     },
     icon: {
         color: "#1DB954",

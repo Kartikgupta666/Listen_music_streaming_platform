@@ -21,3 +21,20 @@
     "singers": "Aditya A, NAALAYAK",
     "song": "Sunday"
 }
+
+
+
+
+[
+    {
+        "created_at": "2025-01-31T20:22:57.242474+00:00",
+        "playlist_id": "bdb72842-3933-4203-9abe-598403d56cb7",
+        "playlist_name": "Test 1",
+        "song_list": [
+            [Object],
+            [Object],
+            [Object]
+        ],
+        "user_id": "54555877-d75e-4e6b-bdb6-ac2cda5694ed"
+    }
+]

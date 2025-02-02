@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
-
+import { IconSymbol } from '@/components/ui/IconSymbol';
 
 
 // Sample Component to Render
@@ -8,22 +8,31 @@ const SongCard = ({ title, image, artist, url }) => {
 
     const navigation = useNavigation();
     const handleNavigation = () => {
+        // console.log('Navigating to music player');
         navigation.navigate('MusicPlayer', { title, url, image });
     };
+    const handelAddtoplaylist = () => {
+        // console.log('Navigating to Add_to_playlist');
+        navigation.navigate('Add_to_playlist', { title, image, artist, url });
+    }
 
     return (
-        <TouchableOpacity onPress={handleNavigation} >
-            <View style={styles.playlistItem} >
-                <Image source={{ uri: image }}
-                    style={{ width: 50, height: 50, borderRadius: 100 }}
-                    resizeMode="cover" />
-                <View>
-                    <Text style={styles.playlistTitle}>{title}</Text>
-                    <Text style={styles.playlistDescription}>{artist}</Text>
+        <View style={styles.playlistItem} >
+            <TouchableOpacity onPress={handleNavigation} >
+                <View style={{ flexDirection: "row", alignItems: "center" }}>
+                    <Image source={{ uri: image }}
+                        style={{ width: 50, height: 50, borderRadius: 100 }}
+                        resizeMode="cover" />
+                    <View>
+                        <Text style={styles.playlistTitle}>{title}</Text>
+                        {/* <Text style={styles.playlistDescription}>{artist}</Text> */}
+                    </View>
                 </View>
-            </View>
-
-        </TouchableOpacity >
+            </TouchableOpacity >
+            <TouchableOpacity onPress={handelAddtoplaylist}>
+                <IconSymbol size={30}  name="playlist-add" color="white" />
+            </TouchableOpacity>
+        </View>
     );
 };
 
@@ -72,6 +81,7 @@ const styles = StyleSheet.create({
         // borderBottomWidth: 1,
         paddingBottom: 16,
         paddingTop: 16,
+        justifyContent: "space-between",
     },
     icon: {
         color: "#1DB954",

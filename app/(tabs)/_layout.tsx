@@ -8,9 +8,10 @@ import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-
+  
   return (
     <Tabs
       screenOptions={{
@@ -39,6 +40,13 @@ export default function TabLayout() {
         options={{
           title: 'Playlist',
           tabBarIcon: ({ color }) => <IconSymbol size={32} name="playlist.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="CreatePlaylist"
+        options={{
+          title: 'Create',
+          tabBarIcon: ({ color }) => <IconSymbol size={32} name="add" color={color} />,
         }}
       />
     </Tabs>

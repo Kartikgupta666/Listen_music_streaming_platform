@@ -17,6 +17,10 @@
         "backgroundColor": "#ffffff"
       }
     },
+    "extra": {
+      "EXPO_PUBLIC_SUPABASE_URL": "https://uznpjciuutupgxxhovbf.supabase.co",
+      "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6bnBqY2l1dXR1cGd4eGhvdmJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgwNTczODEsImV4cCI6MjA1MzYzMzM4MX0.xwOeJj3qjEYvYtKesL0I4KGhyLokOEIrQNje4N6lbWU"
+    },
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -32,7 +36,8 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
