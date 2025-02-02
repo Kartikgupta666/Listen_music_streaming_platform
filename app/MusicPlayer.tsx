@@ -103,7 +103,13 @@ const MusicPlayer = () => {
 
             <View style={styles.controls}>
                 <TouchableOpacity onPress={handlePlayPause}>
+                    <IconSymbol size={50} name={"play-skip-back"} color="white" />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handlePlayPause}>
                     <IconSymbol size={50} name={isPlaying ? "pause-circle" : "play-circle"} color="white" />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handlePlayPause}>
+                    <IconSymbol size={50} name={"play-skip-forward"} color="white" />
                 </TouchableOpacity>
             </View>
         </View>

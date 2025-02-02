@@ -5,7 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
-
+import Floating_button from './Floating_button';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -37,6 +37,7 @@ export default function RootLayout() {
         <Stack.Screen name="PlaylistSong" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
+      {/* <Floating_button /> */}
       <StatusBar style="auto" />
     </ThemeProvider>
   );

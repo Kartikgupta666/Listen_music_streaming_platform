@@ -11,7 +11,7 @@ const AuthScreen = () => {
 
     useEffect(() => {
         getId()
-     },[])
+    }, [])
 
 
     // Handle login
@@ -19,7 +19,7 @@ const AuthScreen = () => {
         signIn(email, password)
         navigation.navigate("(tabs)", { sAuthScreen: "CreatePlaylist" });
     };
-    
+
     // Handle signup
     const handleSignup = async () => {
         signUp(email, password)
@@ -48,12 +48,12 @@ const AuthScreen = () => {
                 autoCapitalize="none"
             />
 
-            <Button
+            <Button style={styles.login}
                 title={isLogin ? 'Login' : 'Sign Up'}
                 onPress={isLogin ? handleLogin : handleSignup}
             />
 
-            <Button
+            <Button style={styles.switch}
                 title={isLogin ? 'Switch to Sign Up' : 'Switch to Login'}
                 onPress={() => setIsLogin(!isLogin)}
             />
@@ -83,6 +83,14 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         color: 'white'
     },
+    login: {
+        backgroundColor: "purple",
+        marginBottom:1
+    },
+    switch: {
+        marginTop:1,
+        backgroundColor: "transparent"
+    }
 });
 
 export default AuthScreen;

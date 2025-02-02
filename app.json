@@ -15,11 +15,18 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kartikgangil.player"
     },
     "extra": {
       "EXPO_PUBLIC_SUPABASE_URL": "https://uznpjciuutupgxxhovbf.supabase.co",
-      "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6bnBqY2l1dXR1cGd4eGhvdmJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgwNTczODEsImV4cCI6MjA1MzYzMzM4MX0.xwOeJj3qjEYvYtKesL0I4KGhyLokOEIrQNje4N6lbWU"
+      "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV6bnBqY2l1dXR1cGd4eGhvdmJmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgwNTczODEsImV4cCI6MjA1MzYzMzM4MX0.xwOeJj3qjEYvYtKesL0I4KGhyLokOEIrQNje4N6lbWU",
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "15a4478a-af08-4597-8b56-add564560b96"
+      }
     },
     "web": {
       "bundler": "metro",
@@ -41,6 +48,7 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "owner": "kartikgangil"
   }
 }
